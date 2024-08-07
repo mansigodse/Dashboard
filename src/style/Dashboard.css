@@ -1,0 +1,285 @@
+/* Global Styles */
+body {
+    background-color: #2c2c2c;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    width: 95%;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-left: 4rem !important;
+}
+
+.dashboard-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Flexbox for row alignment */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row>.col-lg-8,
+.row>.col-lg-4 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card Styles */
+.dashboard .card {
+    background-color: #343a40;
+    border: none;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Ensure cards in the same row have equal height */
+.row>.col-lg-8>.card,
+.row>.col-lg-4>.card {
+    flex: 1;
+}
+
+/* Card Header and Body */
+.dashboard .card-header {
+    background-color: #1f1f1f;
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.dashboard .card-body {
+    color: #fff;
+    padding: 1rem;
+    background-color: #343a40 !important;
+}
+
+.dashboard .card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.dashboard .card .card-text {
+    font-size: 1.5rem;
+}
+
+.dashboard .card-header .form-select {
+    width: auto;
+    background: #1f1f1f;
+    border: 1px solid #343a40;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Table Styles */
+.dashboard .table {
+    margin-bottom: 1rem;
+}
+
+.dashboard .table thead th {
+    border-bottom: 2px solid #fff;
+    padding: 0.75rem;
+}
+
+.dashboard .table tbody td {
+    border-top: 1px solid #444;
+    padding: 0.75rem;
+}
+
+/* List Group Styles */
+.dashboard .list-group-item {
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard .list-group-item .mb-1 {
+    font-size: 1.1rem;
+}
+
+.dashboard .list-group-item p {
+    margin: 0;
+}
+
+.dashboard .list-group-item small {
+    color: #ffc107;
+}
+
+/* Trend Icon Styles */
+.dashboard .trend-icon {
+    font-size: 1rem;
+}
+
+/* Progress Circle Styles */
+.dashboard .progress-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(#6f42c1 0% 70%, #e5b3e1 70% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 5px;
+}
+
+.dashboard .progress-circle h2 {
+    margin: 0;
+}
+
+/* Additional Info Styles */
+.dashboard .additional-info-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    position: relative;
+}
+
+.dashboard .additional-info-item .icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.dashboard .additional-info-item .float-right {
+    font-size: 1.5rem;
+    color: #fff;
+    position: absolute;
+    right: 1rem;
+}
+
+/* User Logo and Feedback Styles */
+.customer-logo {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.feedback-item {
+    display: flex;
+    align-items: center;
+}
+
+.feedback-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.rating {
+    color: #ffd700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.small-text {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 576px) {
+    .dashboard .card-body {
+        padding: 1rem;
+    }
+
+    .dashboard .card-title {
+        font-size: 1rem;
+    }
+
+    .dashboard .card-text {
+        font-size: 1.2rem;
+    }
+
+    .dashboard .progress-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .dashboard .progress-circle h2 {
+        font-size: 1.2rem;
+    }
+
+    .dashboard .additional-info-item .icon {
+        font-size: 1.8rem;
+    }
+
+    .dashboard .additional-info-item .float-right {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-title {
+        font-size: 1.8rem;
+    }
+
+    .dashboard .card-title {
+        font-size: 1.1rem;
+    }
+
+    .dashboard .card-text {
+        font-size: 1.4rem;
+    }
+
+    .dashboard .table thead th {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .dashboard {
+        width: 95%;
+    }
+}
+
+/* Icon Colors */
+.dashboard .card .icon-blue {
+    color: #007bff;
+}
+
+.dashboard .card .icon-red {
+    color: #dc3545;
+}
+
+.dashboard .card .icon-green {
+    color: #28a745;
+}
+
+.dashboard .card .icon-pink {
+    color: #e83e8c;
+}
+
+/* Additional Styles */
+.status-label {
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.delivered {
+    color: green;
+}
+
+.pending,
+.cancelled {
+    color: red;
+}
